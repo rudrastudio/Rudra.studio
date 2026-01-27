@@ -112,4 +112,19 @@ footer { text-align: center; padding: 25px 20px; background: #111; margin-top: 4
   }
 
 }
+/* ===== FINAL STICKY HEADER GAP FIX (DESKTOP) ===== */
+@media (min-width: 1024px) {
+
+  body {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+  }
+
+  .hero,
+  .page-banner {
+    margin-top: 0 !important;
+    padding-top: 60px;
+  }
+
+}
 
