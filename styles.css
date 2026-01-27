@@ -33,10 +33,15 @@ header nav ul li a.active, header nav ul li a:hover { color: #e50914; }
   padding: 70px 20px;
   min-height: auto;
 }
+
 .about {
   max-width: 1100px;
   margin: 40px auto;
   padding: 0 20px;
+}
+.about p {
+  max-width: 800px;
+  line-height: 1.7;
 }
 
 min-height: auto;
