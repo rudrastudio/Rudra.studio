@@ -98,4 +98,18 @@ footer { text-align: center; padding: 25px 20px; background: #111; margin-top: 4
   }
 
 }
+/* ===== FINAL DESKTOP FLOW RESET ===== */
+@media (min-width: 1024px) {
+
+  body,
+  main,
+  section {
+    display: block !important;
+    align-items: unset !important;
+    justify-content: unset !important;
+    min-height: auto !important;
+    height: auto !important;
+  }
+
+}
 
