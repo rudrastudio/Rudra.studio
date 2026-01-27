@@ -73,4 +73,29 @@ footer { text-align: center; padding: 25px 20px; background: #111; margin-top: 4
 .hero {
   padding: 40px 20px;
 }
+/* ===== DESKTOP SPACING FIX ===== */
+@media (min-width: 1024px) {
+
+  section {
+    margin: 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  h1, h2, h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 16px;
+  }
+
+  .hero {
+    padding-top: 80px;
+    padding-bottom: 60px;
+  }
+
+}
 
