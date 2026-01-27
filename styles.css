@@ -59,3 +59,7 @@ footer { text-align: center; padding: 25px 20px; background: #111; margin-top: 4
     header nav ul { flex-direction: column; gap: 10px; }
     .page-banner h1 { font-size: 2rem; }
 }
+/* FIX HERO HEIGHT ISSUE */
+.hero {
+  padding: 60px 20px;
+}
