@@ -28,12 +28,14 @@ header nav ul li a { color: #fff; font-weight: 500; padding: 5px 10px; }
 header nav ul li a.active, header nav ul li a:hover { color: #e50914; }
 
 .page-banner {
+  min-height: auto;
   background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero.jpg') center/cover no-repeat;
   padding: 70px 20px;
   min-height: auto;
 }
 
-.content-section { padding: 40px 20px; max-width: 1100px; margin: 0 auto; }
+min-height: auto;
+.content-section { padding: 40px 20px; max-width: 1100px; margin: 0 auto; min-height: auto; }
 .content-section:nth-child(even) {
   background: #f7f7f7;
 }
