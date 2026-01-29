@@ -1,58 +1,273 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Us – Rudrastic Innovations</title>
-    <link rel="stylesheet" href="styles.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>About Us – Rudrastic Innovations</title>
+
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Montserrat', sans-serif;
+}
+
+body{
+    background:#0b0b0b;
+    color:#f5f5f5;
+    line-height:1.7;
+}
+
+/* HEADER */
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:rgba(0,0,0,0.7);
+    backdrop-filter: blur(8px);
+}
+
+.logo{
+    font-weight:700;
+    letter-spacing:2px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    font-size:14px;
+    text-transform:uppercase;
+    opacity:0.8;
+}
+
+nav a:hover,
+nav a.active{
+    opacity:1;
+}
+
+/* HERO VIDEO */
+.hero{
+    height:100vh;
+    position:relative;
+    overflow:hidden;
+}
+
+.hero iframe{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    width:177.77vh;
+    height:100vh;
+    pointer-events:none;
+}
+
+.hero-overlay{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(to bottom, rgba(0,0,0,.4), rgba(0,0,0,.85));
+}
+
+.hero-content{
+    position:absolute;
+    bottom:120px;
+    left:60px;
+    max-width:700px;
+}
+
+.hero-content h1{
+    font-size:48px;
+    font-weight:700;
+}
+
+.hero-content p{
+    margin-top:15px;
+    font-size:18px;
+    opacity:.9;
+}
+
+/* CONTENT SECTIONS */
+section{
+    padding:100px 60px;
+}
+
+.section-title{
+    font-size:32px;
+    margin-bottom:30px;
+}
+
+.text-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+}
+
+.text-grid img{
+    width:100%;
+    border-radius:12px;
+}
+
+/* EXPERTISE */
+.expertise{
+    background:#111;
+}
+
+.expertise ul{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:30px;
+    list-style:none;
+}
+
+.expertise li{
+    background:#1a1a1a;
+    padding:30px;
+    border-radius:12px;
+    font-weight:500;
+}
+
+/* FOOTER */
+footer{
+    background:#000;
+    padding:60px;
+    text-align:center;
+    font-size:14px;
+}
+
+footer a{
+    color:#aaa;
+    text-decoration:none;
+}
+
+footer a:hover{
+    color:#fff;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+    .text-grid{
+        grid-template-columns:1fr;
+    }
+    .hero-content h1{
+        font-size:36px;
+    }
+    header{
+        padding:20px 30px;
+    }
+    section{
+        padding:80px 30px;
+    }
+}
+</style>
 </head>
+
 <body>
-    <header class="header">
-        <div class="logo">RUDRASTIC INNOVATIONS</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html" class="active">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <section class="page-banner">
-        <h1>Driven by Story. Built on Craft.</h1>
-
-    </section>
-
-    <section class="content-section">
-        <h2>Our Story</h2>
-       <p>
-Rudrastic Innovations is a film and visual production studio focused on meaningful storytelling
-and high-impact visual craft. With international recognition and a hands-on creative approach,
-we develop and produce original films, branded content, and cinematic narratives that resonate
-across audiences.
-</p>
-        <h2>Our Vision</h2>
-        <p>
-            We believe in powerful storytelling that resonates emotionally.
-            Our mission is to create cinematic experiences that inspire audiences across the globe.
-        </p>
-
-        <h2>Our Expertise</h2>
-        <ul class="styled-list">
-            <li>Short Films & Award-Winning Productions</li>
-            <li>Music Albums & Videos</li>
-            <li>Documentary Filmmaking</li>
-            <li>Television Commercials</li>
-            <li>Corporate & Branding Films</li>
+<header>
+    <div class="logo">RUDRASTIC INNOVATIONS</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
-    </section>
+    </nav>
+</header>
 
-    <footer>
-        <p>Email: <a href="mailto:info@rudra.studio">info@rudra.studio</a></p>
-        <p>Website: <a href="https://rudra.studio">rudra.studio</a></p>
-        <p>© 2025 Rudrastic Innovations — rudra.studio. All Rights Reserved.</p>
-    </footer>
+<!-- HERO VIDEO SECTION -->
+<section class="hero">
+    <!-- REAL CINEMATIC SHOWREEL VIDEO (YouTube) -->
+    <iframe 
+        src="https://www.youtube.com/embed/ScMzIvxBSi4?autoplay=1&mute=1&controls=0&loop=1&playlist=ScMzIvxBSi4"
+        frameborder="0"
+        allow="autoplay; fullscreen">
+    </iframe>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+        <h1>Driven by Story. Built on Craft.</h1>
+        <p>
+            We create cinematic narratives, branded films, and visual experiences
+            that leave a lasting impact.
+        </p>
+    </div>
+</section>
+
+<!-- STORY -->
+<section>
+    <h2 class="section-title">Our Story</h2>
+    <div class="text-grid">
+        <div>
+            <p>
+                Rudrastic Innovations is a film and visual production studio dedicated
+                to meaningful storytelling and high-impact visuals.
+                With international recognition and a hands-on creative approach,
+                we develop original films, branded content, and cinematic narratives
+                that resonate across audiences.
+            </p>
+            <p style="margin-top:20px;">
+                From concept to final cut, we blend artistic vision with technical
+                precision to craft stories that feel authentic, bold, and timeless.
+            </p>
+        </div>
+        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="Film Production">
+    </div>
+</section>
+
+<!-- VISION -->
+<section>
+    <h2 class="section-title">Our Vision</h2>
+    <div class="text-grid">
+        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Cinematic Vision">
+        <div>
+            <p>
+                We believe in the power of cinema to move people emotionally.
+                Our vision is to create stories that transcend borders and connect
+                cultures through powerful visuals and sound.
+            </p>
+            <p style="margin-top:20px;">
+                Every frame is intentional. Every story matters.
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- EXPERTISE -->
+<section class="expertise">
+    <h2 class="section-title">Our Expertise</h2>
+    <ul>
+        <li>🎬 Short Films & Award-Winning Productions</li>
+        <li>🎵 Music Albums & Music Videos</li>
+        <li>📽️ Documentary Filmmaking</li>
+        <li>📺 Television Commercials</li>
+        <li>🏢 Corporate & Branding Films</li>
+        <li>🌍 International Co-Productions</li>
+    </ul>
+</section>
+
+<footer>
+    <p>Email: <a href="mailto:info@rudra.studio">info@rudra.studio</a></p>
+    <p>Website: <a href="https://rudra.studio">rudra.studio</a></p>
+    <p style="margin-top:15px;">© 2025 Rudrastic Innovations. All Rights Reserved.</p>
+</footer>
+
 </body>
 </html>
