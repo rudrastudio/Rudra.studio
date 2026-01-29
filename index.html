@@ -22,18 +22,16 @@ body{
     line-height:1.7;
 }
 
-/* HEADER */
 header{
-    position:fixed;
-    top:0;
+    /* position: fixed; */ /* REMOVE this */
+    /* top:0; */           /* REMOVE this */
     width:100%;
-    z-index:1000;
     display:flex;
     justify-content:space-between;
     align-items:center;
     padding:20px 60px;
-    background:rgba(0,0,0,0.7);
-    backdrop-filter: blur(8px);
+    background:rgba(0,0,0,0.9); /* optional: keep slightly opaque */
+    backdrop-filter: blur(8px);  /* optional */
 }
 
 .logo{
