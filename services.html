@@ -23,17 +23,19 @@ body{
 }
 
 /* HEADER */
-header{
-    position:fixed;
-    top:0;
-    width:100%;
-    z-index:1000;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 60px;
-    background:rgba(0,0,0,0.7);
+header {
+    position: absolute; /* Overlays on top of hero image */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: rgba(0, 0, 0, 0.3); /* semi-transparent */
     backdrop-filter: blur(8px);
+    transition: top 0.3s ease, background 0.3s ease; /* smooth hide/show */
+    z-index: 1000;
 }
 
 .logo{
@@ -193,7 +195,9 @@ footer a:hover{
 
 <!-- HEADER -->
 <header>
-    <div class="logo">RUDRASTIC INNOVATIONS</div>
+<div class="logo">
+    <img src="images/logo.png" alt="Rudrastic Innovations Logo">
+</div>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
