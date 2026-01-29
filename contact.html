@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Contact – Rudrastic Innovations</title>
 
-<!-- Google Font (same as About page) -->
+<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -24,7 +24,7 @@ body{
 
 /* HEADER */
 header {
-    position: absolute; /* Overlays on top of hero image */
+    position: fixed; /* fixed for scroll effect */
     top: 0;
     left: 0;
     width: 100%;
@@ -32,15 +32,14 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 60px;
-    background: rgba(0, 0, 0, 0.3); /* semi-transparent */
+    background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(8px);
-    transition: top 0.3s ease, background 0.3s ease; /* smooth hide/show */
+    transition: top 0.3s ease, background 0.3s ease;
     z-index: 1000;
 }
 
-.logo{
-    font-weight:700;
-    letter-spacing:2px;
+.logo img {
+    max-height: 50px;
 }
 
 nav ul{
@@ -186,10 +185,12 @@ footer{
 
 <body>
 
-<header>
-<div class="logo">
-    <img src="images/logo.png" alt="Rudrastic Innovations Logo">
-</div>
+<!-- HEADER -->
+<header id="header">
+    <div class="logo">
+        <img src="images/logo.png" alt="Rudrastic Innovations Logo">
+    </div>
+    <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
@@ -211,7 +212,7 @@ footer{
     <p>We’d love to hear from you. Reach out to us for collaborations, projects, or inquiries.</p>
 
     <div class="contact-wrapper">
-        <!-- FORM (unchanged fields) -->
+        <!-- FORM -->
         <form class="contact-form">
             <input type="text" name="name" placeholder="Your Name" required>
             <input type="email" name="email" placeholder="Email" required>
@@ -220,7 +221,7 @@ footer{
             <button type="submit">Send Message</button>
         </form>
 
-        <!-- DETAILS (unchanged info) -->
+        <!-- DETAILS -->
         <div class="contact-details">
             <p>Email:<br>
                 <a href="mailto:info@rudra.studio">info@rudra.studio</a>
@@ -235,6 +236,24 @@ footer{
 <footer>
     <p>© 2025 Rudrastic Innovations — rudra.studio. All Rights Reserved.</p>
 </footer>
+
+<!-- HEADER SCROLL HIDE SCRIPT -->
+<script>
+let lastScroll = 0;
+const header = document.getElementById('header');
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset;
+    if (currentScroll > lastScroll && currentScroll > 100) {
+        // Scrolling down
+        header.style.top = '-100px';
+    } else {
+        // Scrolling up
+        header.style.top = '0';
+    }
+    lastScroll = currentScroll;
+});
+</script>
 
 </body>
 </html>
