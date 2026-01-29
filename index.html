@@ -22,17 +22,21 @@ body{
     line-height:1.7;
 }
 
-header{
-    /* position: fixed; */ /* REMOVE this */
-    /* top:0; */           /* REMOVE this */
-    width:100%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:20px 60px;
-    background:rgba(0,0,0,0.9); /* optional: keep slightly opaque */
-    backdrop-filter: blur(8px);  /* optional */
+header {
+    position: absolute; /* Overlays on top of hero image */
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: rgba(0, 0, 0, 0.3); /* semi-transparent */
+    backdrop-filter: blur(8px);
+    transition: top 0.3s ease, background 0.3s ease; /* smooth hide/show */
+    z-index: 1000;
 }
+
 
 .logo{
     font-weight:50;
