@@ -1,63 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rudrastic Innovations – Film Production Studio</title>
-    <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <div class="logo">RUDRASTIC INNOVATIONS</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Rudrastic Innovations – Film Production Studio</title>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="overlay"></div>
-        <div class="hero-content">
-            <h1>Stories That Move, Frames That Stay.</h1>
-<p>An award-winning film & visual production studio crafting cinema, brands, and powerful narratives.</p>
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-            <a class="btn" href="services.html">Explore Our Work</a>
-        </div>
-    </section>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Montserrat', sans-serif;
+}
 
-    <!-- About -->
-    <section class="about">
-        <p>
-Rudrastic Innovations is an independent film and visual production studio driven by strong storytelling,
-cinematic craft, and creative integrity. From original films to branded visual narratives, we build
-stories that connect emotionally and stay relevant.
-</p>
+body{
+    background:#0b0b0b;
+    color:#f5f5f5;
+    line-height:1.7;
+}
 
-    </section>
+/* HEADER */
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:rgba(0,0,0,0.7);
+    backdrop-filter: blur(8px);
+}
 
-    <!-- Services Preview -->
-    <section class="services">
-        <h2>Our Services</h2>
-        <div class="service-grid">
-            <div class="service-card">Film Production</div>
-            <div class="service-card">Music Videos</div>
-            <div class="service-card">Commercial Ads</div>
-            <div class="service-card">Corporate Videos</div>
-        </div>
-    </section>
+.logo{
+    font-weight:700;
+    letter-spacing:2px;
+}
 
-    <!-- Footer -->
-    <footer>
-        <p>Email: <a href="mailto:info@rudra.studio">info@rudra.studio</a></p>
-        <p>Website: <a href="https://rudra.studio">rudra.studio</a></p>
-        <p>© 2025 Rudrastic Innovations — rudra.studio. All Rights Reserved.</p>
-    </footer>
-</body>
-</html>
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav a{
+    color:#fff;
+    text-decoration:none;
+    font-size:14px;
+    text-transform:uppercase;
+    opacity:.8;
+}
+
+nav a:hover{
+    opacity:1;
+}
+
+/* HERO */
+.hero{
+    height:100vh;
+    position:relative;
+    background:
+        linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,.9)),
+        url("https://images.unsplash.com/photo-1492724441997-5dc865305da7") center/cover no-repeat;
+    display:flex;
+    align-items:flex-end;
+    padding:120px 60px;
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.hero h1{
+    font-size:48px;
