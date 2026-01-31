@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Rudrastic Innovations – Film Production Studio</title>
 
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -22,8 +21,9 @@ body{
     line-height:1.7;
 }
 
+/* HEADER */
 header {
-    position: absolute; /* Overlays on top of hero image */
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -31,16 +31,13 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 60px;
-    background: rgba(0, 0, 0, 0.3); /* semi-transparent */
+    background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(8px);
-    transition: top 0.3s ease, background 0.3s ease; /* smooth hide/show */
     z-index: 1000;
 }
 
-
-.logo{
-    font-weight:50;
-    letter-spacing:2px;
+.logo img{
+    height:45px; /* controlled logo size */
 }
 
 nav ul{
@@ -63,22 +60,22 @@ nav a:hover{
 
 /* HERO */
 .hero{
-    height:100vh;
+    height:90vh; /* reduced from 100vh */
     position:relative;
     background:
         linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.9)),
-        url("https://images.unsplash.com/photo-1492724441997-5dc865305da7") center/cover no-repeat;
+        url("images/hero.jpg") center/cover no-repeat;
     display:flex;
     align-items:flex-end;
     padding:120px 60px;
 }
 
 .hero-content{
-    max-width:700px;
+    max-width:650px;
 }
 
 .hero h1{
-    font-size:48px;
+    font-size:46px;
     font-weight:700;
 }
 
@@ -162,7 +159,9 @@ section{
 
 .showcase img{
     width:100%;
+    max-width:450px;   /* prevents oversized image */
     border-radius:14px;
+    justify-self:center;
 }
 
 /* FOOTER */
@@ -192,6 +191,7 @@ footer a:hover{
     }
     .hero{
         padding:100px 30px;
+        height:80vh;
     }
     .hero h1{
         font-size:36px;
@@ -207,11 +207,9 @@ footer a:hover{
 
 <!-- HEADER -->
 <header>
-<div class="logo">
-    <img src="images/logo.png" alt="Rudrastic Innovations Logo">
-</div>
-
-</div>
+    <div class="logo">
+        <img src="images/logo.png" alt="Rudrastic Innovations Logo">
+    </div>
 
     <nav>
         <ul>
@@ -227,7 +225,6 @@ footer a:hover{
 <!-- HERO -->
 <section class="hero">
     <div class="hero-content">
-        <!-- ORIGINAL CONTENT (UNCHANGED) -->
         <h1>Stories That Move, Frames That Stay.</h1>
         <p>An award-winning film & visual production studio crafting cinema, brands, and powerful narratives.</p>
         <a class="btn" href="services.html">Explore Our Work</a>
@@ -236,7 +233,6 @@ footer a:hover{
 
 <!-- ABOUT -->
 <section class="about">
-    <!-- ORIGINAL CONTENT (UNCHANGED) -->
     <p>
         Rudrastic Innovations is an independent film and visual production studio driven by strong storytelling,
         cinematic craft, and creative integrity. From original films to branded visual narratives, we build
@@ -247,7 +243,6 @@ footer a:hover{
 <!-- SERVICES -->
 <section>
     <h2 class="section-title">Our Services</h2>
-    <!-- ORIGINAL CONTENT (UNCHANGED) -->
     <div class="service-grid">
         <div class="service-card">Film Production</div>
         <div class="service-card">Music Videos</div>
@@ -256,34 +251,16 @@ footer a:hover{
     </div>
 </section>
 
-<!-- EXTENDED MEDIA SERVICES -->
+<!-- CAPABILITIES -->
 <section class="capabilities">
     <h2 class="section-title">What We Create</h2>
     <div class="capability-grid">
-        <div class="capability">
-            <h3>🎬 Films & Web Series</h3>
-            <p>Feature films, short films, and episodic web series with cinematic quality.</p>
-        </div>
-        <div class="capability">
-            <h3>🎙 Podcasts</h3>
-            <p>Complete podcast production, recording, editing, and publishing support.</p>
-        </div>
-        <div class="capability">
-            <h3>🎵 Music Production</h3>
-            <p>Music albums, original compositions, sound design, and studio recordings.</p>
-        </div>
-        <div class="capability">
-            <h3>🎥 Content Creation</h3>
-            <p>Digital content, branded stories, social media videos, and campaigns.</p>
-        </div>
-        <div class="capability">
-            <h3>🎞 Post Production</h3>
-            <p>Editing, color grading, VFX, sound mixing, and mastering.</p>
-        </div>
-        <div class="capability">
-            <h3>🎤 Event Management</h3>
-            <p>Live events, concerts, conferences, and complete media coverage.</p>
-        </div>
+        <div class="capability"><h3>🎬 Films & Web Series</h3></div>
+        <div class="capability"><h3>🎙 Podcasts</h3></div>
+        <div class="capability"><h3>🎵 Music Production</h3></div>
+        <div class="capability"><h3>🎥 Content Creation</h3></div>
+        <div class="capability"><h3>🎞 Post Production</h3></div>
+        <div class="capability"><h3>🎤 Event Management</h3></div>
     </div>
 </section>
 
@@ -293,20 +270,18 @@ footer a:hover{
         <div>
             <h2 class="section-title">From Concept to Screen</h2>
             <p>
-                From ideation to final delivery, we handle the entire creative pipeline.
-                Our team ensures every project is crafted with clarity, quality,
-                and cinematic depth across film, audio, and digital platforms.
+                From ideation to final delivery, we handle the entire creative pipeline
+                with cinematic depth across platforms.
             </p>
         </div>
-        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="Film Production Set">
+        <img src="images/showcase.jpg" alt="Rudrastic Innovations Studio">
     </div>
 </section>
 
 <!-- FOOTER -->
 <footer>
     <p>Email: <a href="mailto:info@rudra.studio">info@rudra.studio</a></p>
-    <p>Website: <a href="https://rudra.studio">rudra.studio</a></p>
-    <p style="margin-top:15px;">© 2025 Rudrastic Innovations — rudra.studio. All Rights Reserved.</p>
+    <p>© 2025 Rudrastic Innovations — All Rights Reserved.</p>
 </footer>
 
 </body>
