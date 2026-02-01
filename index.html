@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Rudrastic Innovations – Film Production Studio</title>
 
+<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -21,7 +22,7 @@ body{
     line-height:1.7;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 header {
     position: absolute;
     top: 0;
@@ -31,13 +32,13 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 60px;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.35);
     backdrop-filter: blur(8px);
     z-index: 1000;
 }
 
 .logo img{
-    height:45px; /* controlled logo size */
+    height:45px;
 }
 
 nav ul{
@@ -58,13 +59,13 @@ nav a:hover{
     opacity:1;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 .hero{
-    height:90vh; /* reduced from 100vh */
+    height:90vh;
     position:relative;
     background:
-        linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.9)),
-        url("images/1.jpg") center/cover no-repeat;
+        linear-gradient(to bottom, rgba(0,0,0,0.35), rgba(0,0,0,0.9)),
+        url("./images/1.jpg") center/cover no-repeat;
     display:flex;
     align-items:flex-end;
     padding:120px 60px;
@@ -96,7 +97,7 @@ nav a:hover{
     border-radius:30px;
 }
 
-/* SECTIONS */
+/* ================= SECTIONS ================= */
 section{
     padding:100px 60px;
 }
@@ -106,7 +107,7 @@ section{
     margin-bottom:30px;
 }
 
-/* ABOUT */
+/* ================= ABOUT ================= */
 .about{
     max-width:900px;
     margin:auto;
@@ -114,7 +115,7 @@ section{
     font-size:18px;
 }
 
-/* SERVICES */
+/* ================= SERVICES ================= */
 .service-grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
@@ -126,9 +127,10 @@ section{
     padding:40px 30px;
     border-radius:14px;
     font-weight:600;
+    text-align:center;
 }
 
-/* CAPABILITIES */
+/* ================= CAPABILITIES ================= */
 .capabilities{
     background:#111;
 }
@@ -149,7 +151,7 @@ section{
     margin-bottom:10px;
 }
 
-/* SHOWCASE */
+/* ================= SHOWCASE ================= */
 .showcase{
     display:grid;
     grid-template-columns:1fr 1fr;
@@ -159,12 +161,12 @@ section{
 
 .showcase img{
     width:100%;
-    max-width:450px;   /* prevents oversized image */
+    max-width:450px;
     border-radius:14px;
     justify-self:center;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 footer{
     background:#000;
     padding:60px;
@@ -181,7 +183,7 @@ footer a:hover{
     color:#fff;
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
 @media(max-width:900px){
     header{
         padding:20px 30px;
@@ -205,10 +207,10 @@ footer a:hover{
 
 <body>
 
-<!-- HEADER -->
+<!-- ================= HEADER ================= -->
 <header>
     <div class="logo">
-        <img src="images/logo.png" alt="Rudrastic Innovations Logo">
+        <img src="./images/logo.png" alt="Rudrastic Innovations Logo">
     </div>
 
     <nav>
@@ -222,25 +224,29 @@ footer a:hover{
     </nav>
 </header>
 
-<!-- HERO -->
+<!-- ================= HERO ================= -->
 <section class="hero">
     <div class="hero-content">
         <h1>Stories That Move, Frames That Stay.</h1>
-        <p>An award-winning film & visual production studio crafting cinema, brands, and powerful narratives.</p>
+        <p>
+            An award-winning film & visual production studio crafting cinema,
+            brands, and powerful narratives.
+        </p>
         <a class="btn" href="services.html">Explore Our Work</a>
     </div>
 </section>
 
-<!-- ABOUT -->
+<!-- ================= ABOUT ================= -->
 <section class="about">
     <p>
-        Rudrastic Innovations is an independent film and visual production studio driven by strong storytelling,
-        cinematic craft, and creative integrity. From original films to branded visual narratives, we build
-        stories that connect emotionally and stay relevant.
+        Rudrastic Innovations is an independent film and visual production studio
+        driven by strong storytelling, cinematic craft, and creative integrity.
+        From original films to branded visual narratives, we build stories that
+        connect emotionally and stay relevant.
     </p>
 </section>
 
-<!-- SERVICES -->
+<!-- ================= SERVICES ================= -->
 <section>
     <h2 class="section-title">Our Services</h2>
     <div class="service-grid">
@@ -251,7 +257,7 @@ footer a:hover{
     </div>
 </section>
 
-<!-- CAPABILITIES -->
+<!-- ================= CAPABILITIES ================= -->
 <section class="capabilities">
     <h2 class="section-title">What We Create</h2>
     <div class="capability-grid">
@@ -264,24 +270,26 @@ footer a:hover{
     </div>
 </section>
 
-<!-- SHOWCASE -->
+<!-- ================= SHOWCASE ================= -->
 <section>
     <div class="showcase">
         <div>
             <h2 class="section-title">From Concept to Screen</h2>
             <p>
-                From ideation to final delivery, we handle the entire creative pipeline
-                with cinematic depth across platforms.
+                From ideation to final delivery, we handle the entire creative
+                pipeline with cinematic depth across film, audio, and digital platforms.
             </p>
         </div>
-        <img src="images/2.jpg" alt="Rudrastic Innovations Studio">
+        <img src="./images/2.jpg" alt="Rudrastic Innovations Studio">
     </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ================= FOOTER ================= -->
 <footer>
     <p>Email: <a href="mailto:info@rudra.studio">info@rudra.studio</a></p>
-    <p>© 2025 Rudrastic Innovations — All Rights Reserved.</p>
+    <p style="margin-top:10px;">
+        © 2025 Rudrastic Innovations — All Rights Reserved.
+    </p>
 </footer>
 
 </body>
