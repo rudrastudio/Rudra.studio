@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>About Us – Rudrastic Innovations</title>
 
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -32,7 +31,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 60px;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0,0,0,0.35);
     backdrop-filter: blur(8px);
     z-index: 1000;
 }
@@ -60,33 +59,19 @@ nav a.active{
     opacity:1;
 }
 
-/* ================= HERO VIDEO ================= */
+/* ================= HERO (STATIC IMAGE) ================= */
 .hero{
-    height:100vh;
+    height:90vh;
     position:relative;
-    overflow:hidden;
-}
-
-.hero iframe{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%,-50%);
-    width:177.77vh;
-    height:100vh;
-    pointer-events:none;
-}
-
-.hero-overlay{
-    position:absolute;
-    inset:0;
-    background:linear-gradient(to bottom, rgba(0,0,0,.4), rgba(0,0,0,.85));
+    background:
+        linear-gradient(to bottom, rgba(0,0,0,.45), rgba(0,0,0,.9)),
+        url("./images/3.png") center/cover no-repeat;
+    display:flex;
+    align-items:flex-end;
 }
 
 .hero-content{
-    position:absolute;
-    bottom:120px;
-    left:60px;
+    padding:120px 60px;
     max-width:700px;
 }
 
@@ -120,7 +105,7 @@ section{
 
 .text-grid img{
     width:100%;
-    max-width:480px; /* prevent huge images */
+    max-width:480px;
     border-radius:12px;
     justify-self:center;
 }
@@ -175,6 +160,9 @@ footer a:hover{
     section{
         padding:80px 30px;
     }
+    .hero-content{
+        padding:100px 30px;
+    }
 }
 </style>
 </head>
@@ -183,31 +171,23 @@ footer a:hover{
 
 <!-- ================= HEADER ================= -->
 <header>
-<div class="logo">
-    <img src="./images/logo.png" alt="Rudrastic Innovations Logo">
-</div>
+    <div class="logo">
+        <img src="./images/logo.png" alt="Rudrastic Innovations Logo">
+    </div>
 
-<nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" class="active">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 </header>
 
-<!-- ================= HERO VIDEO SECTION ================= -->
+<!-- ================= HERO ================= -->
 <section class="hero">
-    <iframe 
-        src="https://www.youtube.com/embed/ScMzIvxBSi4?autoplay=1&mute=1&controls=0&loop=1&playlist=ScMzIvxBSi4"
-        frameborder="0"
-        allow="autoplay; fullscreen">
-    </iframe>
-
-    <div class="hero-overlay"></div>
-
     <div class="hero-content">
         <h1>Driven by Story. Built on Craft.</h1>
         <p>
@@ -225,8 +205,6 @@ footer a:hover{
             <p>
                 Rudrastic Innovations is a film and visual production studio dedicated
                 to meaningful storytelling and high-impact visuals.
-                We develop original films, branded content, and cinematic narratives
-                that resonate across audiences.
             </p>
             <p style="margin-top:20px;">
                 From concept to final cut, we blend artistic vision with technical
@@ -234,7 +212,6 @@ footer a:hover{
             </p>
         </div>
 
-        <!-- LOCAL IMAGE -->
         <img src="./images/3.png" alt="Rudrastic Film Production">
     </div>
 </section>
@@ -244,7 +221,6 @@ footer a:hover{
     <h2 class="section-title">Our Vision</h2>
     <div class="text-grid">
 
-        <!-- LOCAL IMAGE -->
         <img src="./images/4.png" alt="Rudrastic Cinematic Vision">
 
         <div>
