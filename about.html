@@ -22,9 +22,9 @@ body{
     line-height:1.7;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 header {
-    position: absolute; /* Overlays on top of hero image */
+    position: absolute;
     top: 0;
     left: 0;
     width: 100%;
@@ -32,15 +32,13 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 60px;
-    background: rgba(0, 0, 0, 0.3); /* semi-transparent */
+    background: rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(8px);
-    transition: top 0.3s ease, background 0.3s ease; /* smooth hide/show */
     z-index: 1000;
 }
 
-.logo{
-    font-weight:700;
-    letter-spacing:2px;
+.logo img{
+    height:45px;
 }
 
 nav ul{
@@ -62,7 +60,7 @@ nav a.active{
     opacity:1;
 }
 
-/* HERO VIDEO */
+/* ================= HERO VIDEO ================= */
 .hero{
     height:100vh;
     position:relative;
@@ -103,7 +101,7 @@ nav a.active{
     opacity:.9;
 }
 
-/* CONTENT SECTIONS */
+/* ================= SECTIONS ================= */
 section{
     padding:100px 60px;
 }
@@ -117,14 +115,17 @@ section{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:60px;
+    align-items:center;
 }
 
 .text-grid img{
     width:100%;
+    max-width:480px; /* prevent huge images */
     border-radius:12px;
+    justify-self:center;
 }
 
-/* EXPERTISE */
+/* ================= EXPERTISE ================= */
 .expertise{
     background:#111;
 }
@@ -143,7 +144,7 @@ section{
     font-weight:500;
 }
 
-/* FOOTER */
+/* ================= FOOTER ================= */
 footer{
     background:#000;
     padding:60px;
@@ -160,7 +161,7 @@ footer a:hover{
     color:#fff;
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
 @media(max-width:900px){
     .text-grid{
         grid-template-columns:1fr;
@@ -180,24 +181,25 @@ footer a:hover{
 
 <body>
 
+<!-- ================= HEADER ================= -->
 <header>
 <div class="logo">
-    <img src="images/logo.png" alt="Rudrastic Innovations Logo">
+    <img src="./images/logo.png" alt="Rudrastic Innovations Logo">
 </div>
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html" class="active">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
 </header>
 
-<!-- HERO VIDEO SECTION -->
+<!-- ================= HERO VIDEO SECTION ================= -->
 <section class="hero">
-    <!-- REAL CINEMATIC SHOWREEL VIDEO (YouTube) -->
     <iframe 
         src="https://www.youtube.com/embed/ScMzIvxBSi4?autoplay=1&mute=1&controls=0&loop=1&playlist=ScMzIvxBSi4"
         frameborder="0"
@@ -215,7 +217,7 @@ footer a:hover{
     </div>
 </section>
 
-<!-- STORY -->
+<!-- ================= OUR STORY ================= -->
 <section>
     <h2 class="section-title">Our Story</h2>
     <div class="text-grid">
@@ -223,8 +225,7 @@ footer a:hover{
             <p>
                 Rudrastic Innovations is a film and visual production studio dedicated
                 to meaningful storytelling and high-impact visuals.
-                With international recognition and a hands-on creative approach,
-                we develop original films, branded content, and cinematic narratives
+                We develop original films, branded content, and cinematic narratives
                 that resonate across audiences.
             </p>
             <p style="margin-top:20px;">
@@ -232,15 +233,20 @@ footer a:hover{
                 precision to craft stories that feel authentic, bold, and timeless.
             </p>
         </div>
-        <img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f" alt="Film Production">
+
+        <!-- LOCAL IMAGE -->
+        <img src="./images/3.png" alt="Rudrastic Film Production">
     </div>
 </section>
 
-<!-- VISION -->
+<!-- ================= OUR VISION ================= -->
 <section>
     <h2 class="section-title">Our Vision</h2>
     <div class="text-grid">
-        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="Cinematic Vision">
+
+        <!-- LOCAL IMAGE -->
+        <img src="./images/4.png" alt="Rudrastic Cinematic Vision">
+
         <div>
             <p>
                 We believe in the power of cinema to move people emotionally.
@@ -254,7 +260,7 @@ footer a:hover{
     </div>
 </section>
 
-<!-- EXPERTISE -->
+<!-- ================= EXPERTISE ================= -->
 <section class="expertise">
     <h2 class="section-title">Our Expertise</h2>
     <ul>
@@ -267,6 +273,7 @@ footer a:hover{
     </ul>
 </section>
 
+<!-- ================= FOOTER ================= -->
 <footer>
     <p>Email: <a href="mailto:info@rudra.studio">info@rudra.studio</a></p>
     <p>Website: <a href="https://rudra.studio">rudra.studio</a></p>
