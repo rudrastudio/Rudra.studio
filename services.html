@@ -86,10 +86,10 @@ section{
     margin-bottom:40px;
 }
 
-/* SERVICES GRID */
+/* SERVICES GRID – FIXED ALIGNMENT */
 .services-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    grid-template-columns:repeat(4, 1fr);
     gap:40px;
 }
 
@@ -99,61 +99,31 @@ section{
     border-radius:16px;
 }
 
+/* Invisible filler card */
+.service-item.empty{
+    background:transparent;
+    box-shadow:none;
+    pointer-events:none;
+}
+
 .service-item h2{
     margin-bottom:15px;
     font-size:22px;
 }
 
-/* PROCESS */
-.process{
-    background:#111;
+/* RESPONSIVE */
+@media(max-width:1200px){
+    .services-grid{
+        grid-template-columns:repeat(2, 1fr);
+    }
 }
 
-.process-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:30px;
+@media(max-width:600px){
+    .services-grid{
+        grid-template-columns:1fr;
+    }
 }
 
-.process-step{
-    background:#1a1a1a;
-    padding:30px;
-    border-radius:14px;
-}
-
-/* WHY US */
-.why-us{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:60px;
-    align-items:center;
-}
-
-.why-us img{
-    width:100%;
-    height:380px;
-    object-fit:cover;
-    border-radius:16px;
-}
-
-/* CTA */
-.cta{
-    text-align:center;
-    background:#000;
-}
-
-.cta a{
-    display:inline-block;
-    margin-top:25px;
-    padding:14px 40px;
-    background:#fff;
-    color:#000;
-    text-decoration:none;
-    font-weight:600;
-    border-radius:30px;
-}
-
-/* FOOTER */
 footer{
     background:#000;
     padding:60px;
@@ -168,28 +138,6 @@ footer a{
 
 footer a:hover{
     color:#fff;
-}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-    header{
-        padding:20px 30px;
-    }
-    section{
-        padding:80px 30px;
-    }
-    .page-hero{
-        padding:100px 30px;
-    }
-    .page-hero h1{
-        font-size:36px;
-    }
-    .why-us{
-        grid-template-columns:1fr;
-    }
-    .why-us img{
-        height:300px;
-    }
 }
 </style>
 </head>
@@ -220,126 +168,50 @@ footer a:hover{
 <!-- SERVICES -->
 <section>
     <h2 class="section-title">What We Do</h2>
+
     <div class="services-grid">
 
         <div class="service-item">
             <h2>Film & Media Production</h2>
-            <p>
-                End-to-end production for short films, feature projects,
-                branded films and digital media — from scripting to final delivery.
-            </p>
+            <p>End-to-end production for films, branded content and digital media.</p>
         </div>
 
         <div class="service-item">
             <h2>Music Production & Videos</h2>
-            <p>
-                Complete music production including composition, recording,
-                mixing, mastering and cinematic music video creation.
-            </p>
+            <p>Composition, recording, mixing, mastering and cinematic music videos.</p>
         </div>
 
         <div class="service-item">
             <h2>Content Writing & Storytelling</h2>
-            <p>
-                Powerful scripts, narratives, lyrics and brand stories crafted
-                to connect emotionally and communicate with clarity.
-            </p>
+            <p>Scripts, narratives and brand stories crafted to connect emotionally.</p>
         </div>
 
         <div class="service-item">
             <h2>Commercials & Brand Films</h2>
-            <p>
-                Television commercials, digital ads and brand films
-                designed to elevate identity and audience engagement.
-            </p>
+            <p>Television commercials and digital brand films for impact.</p>
         </div>
 
         <div class="service-item">
             <h2>Documentaries</h2>
-            <p>
-                Thought-provoking documentaries focused on real stories,
-                social impact, culture, and human experiences.
-            </p>
+            <p>Real stories focused on culture, social impact and human experience.</p>
         </div>
 
         <div class="service-item">
             <h2>Event Management & Coverage</h2>
-            <p>
-                Creative planning, execution and full media coverage for
-                events, launches, concerts and corporate gatherings.
-            </p>
+            <p>Creative planning, execution and complete media coverage.</p>
         </div>
 
         <div class="service-item">
             <h2>Post-Production Services</h2>
-            <p>
-                Editing, color grading, sound design, VFX support and
-                final mastering with cinematic finishing.
-            </p>
+            <p>Editing, color grading, sound design and cinematic finishing.</p>
         </div>
 
-        <div class="service-item">
-            <h2>Creative Consulting</h2>
-            <p>
-                Concept development, creative direction and production
-                consulting for brands, artists and independent creators.
-            </p>
-        </div>
+        <!-- Invisible card to balance grid -->
+        <div class="service-item empty"></div>
 
     </div>
 </section>
 
-<!-- PROCESS -->
-<section class="process">
-    <h2 class="section-title">Our Creative Process</h2>
-    <div class="process-grid">
-        <div class="process-step">
-            <h3>Discovery & Ideation</h3>
-            <p>Understanding goals, audience and crafting strong creative direction.</p>
-        </div>
-        <div class="process-step">
-            <h3>Pre-Production</h3>
-            <p>Planning, scripting, scheduling, casting and logistics.</p>
-        </div>
-        <div class="process-step">
-            <h3>Production</h3>
-            <p>Professional execution with experienced crew and equipment.</p>
-        </div>
-        <div class="process-step">
-            <h3>Post & Delivery</h3>
-            <p>Editing, sound, music, color grading and final distribution.</p>
-        </div>
-    </div>
-</section>
-
-<!-- WHY US -->
-<section>
-    <div class="why-us">
-        <div>
-            <h2 class="section-title">Why Choose Rudrastic Innovations</h2>
-            <p>
-                We are a creative-driven media studio focused on storytelling,
-                quality and authenticity. Every project is handled with
-                cinematic precision, collaborative spirit and attention to detail.
-            </p>
-            <p style="margin-top:18px;">
-                Whether it’s film, music, content or live events,
-                we create experiences that feel meaningful, engaging
-                and visually powerful.
-            </p>
-        </div>
-        <img src="images/6.png" alt="Production Team at Work">
-    </div>
-</section>
-
-<!-- CTA -->
-<section class="cta">
-    <h2 class="section-title">Let’s Build Something Meaningful</h2>
-    <p>Ready to start your next creative project?</p>
-    <a href="contact.html">Get in Touch</a>
-</section>
-
-<!-- FOOTER -->
 <footer>
     <p>Email: <a href="mailto:info@rudra.studio">info@rudra.studio</a></p>
     <p>Website: <a href="https://rudra.studio">rudra.studio</a></p>
