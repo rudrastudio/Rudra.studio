@@ -68,7 +68,7 @@ nav a.active{
     padding:120px 60px;
     background:
         linear-gradient(to bottom, rgba(0,0,0,.4), rgba(0,0,0,.9)),
-        url("images/5.png") center/cover no-repeat;
+        url("images/3.png") center/cover no-repeat;
 }
 
 .page-hero h1{
@@ -86,10 +86,10 @@ section{
     margin-bottom:40px;
 }
 
-/* SERVICES GRID – FIXED ALIGNMENT */
+/* ✅ SERVICES GRID – FIXED 4 x 2 LAYOUT */
 .services-grid{
     display:grid;
-    grid-template-columns:repeat(4, 1fr);
+    grid-template-columns:repeat(4, 1fr); /* EXACTLY 4 PER ROW */
     gap:40px;
 }
 
@@ -99,31 +99,61 @@ section{
     border-radius:16px;
 }
 
-/* Invisible filler card */
-.service-item.empty{
-    background:transparent;
-    box-shadow:none;
-    pointer-events:none;
-}
-
 .service-item h2{
     margin-bottom:15px;
     font-size:22px;
 }
 
-/* RESPONSIVE */
-@media(max-width:1200px){
-    .services-grid{
-        grid-template-columns:repeat(2, 1fr);
-    }
+/* PROCESS */
+.process{
+    background:#111;
 }
 
-@media(max-width:600px){
-    .services-grid{
-        grid-template-columns:1fr;
-    }
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(4, 1fr);
+    gap:30px;
 }
 
+.process-step{
+    background:#1a1a1a;
+    padding:30px;
+    border-radius:14px;
+}
+
+/* WHY US */
+.why-us{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.why-us img{
+    width:100%;
+    height:380px;
+    object-fit:cover;
+    border-radius:16px;
+}
+
+/* CTA */
+.cta{
+    text-align:center;
+    background:#000;
+}
+
+.cta a{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 40px;
+    background:#fff;
+    color:#000;
+    text-decoration:none;
+    font-weight:600;
+    border-radius:30px;
+}
+
+/* FOOTER */
 footer{
     background:#000;
     padding:60px;
@@ -139,12 +169,49 @@ footer a{
 footer a:hover{
     color:#fff;
 }
+
+/* RESPONSIVE */
+@media(max-width:1200px){
+    .services-grid{
+        grid-template-columns:repeat(2, 1fr); /* 2 x 4 */
+    }
+    .process-grid{
+        grid-template-columns:repeat(2, 1fr);
+    }
+}
+
+@media(max-width:600px){
+    .services-grid,
+    .process-grid{
+        grid-template-columns:1fr; /* stacked */
+    }
+}
+
+@media(max-width:900px){
+    header{
+        padding:20px 30px;
+    }
+    section{
+        padding:80px 30px;
+    }
+    .page-hero{
+        padding:100px 30px;
+    }
+    .page-hero h1{
+        font-size:36px;
+    }
+    .why-us{
+        grid-template-columns:1fr;
+    }
+    .why-us img{
+        height:300px;
+    }
+}
 </style>
 </head>
 
 <body>
 
-<!-- HEADER -->
 <header>
     <div class="logo">
         <img src="images/logo.png" alt="Rudrastic Innovations Logo">
@@ -160,12 +227,10 @@ footer a:hover{
     </nav>
 </header>
 
-<!-- HERO -->
 <section class="page-hero">
     <h1>Our Services</h1>
 </section>
 
-<!-- SERVICES -->
 <section>
     <h2 class="section-title">What We Do</h2>
 
@@ -173,43 +238,73 @@ footer a:hover{
 
         <div class="service-item">
             <h2>Film & Media Production</h2>
-            <p>End-to-end production for films, branded content and digital media.</p>
+            <p>End-to-end production from concept to final delivery.</p>
         </div>
 
         <div class="service-item">
             <h2>Music Production & Videos</h2>
-            <p>Composition, recording, mixing, mastering and cinematic music videos.</p>
+            <p>Recording, mixing, mastering and cinematic visuals.</p>
         </div>
 
         <div class="service-item">
             <h2>Content Writing & Storytelling</h2>
-            <p>Scripts, narratives and brand stories crafted to connect emotionally.</p>
+            <p>Scripts, narratives and emotionally driven stories.</p>
         </div>
 
         <div class="service-item">
             <h2>Commercials & Brand Films</h2>
-            <p>Television commercials and digital brand films for impact.</p>
+            <p>High-impact TV and digital brand campaigns.</p>
         </div>
 
         <div class="service-item">
             <h2>Documentaries</h2>
-            <p>Real stories focused on culture, social impact and human experience.</p>
+            <p>Real stories with cultural and social relevance.</p>
         </div>
 
         <div class="service-item">
             <h2>Event Management & Coverage</h2>
-            <p>Creative planning, execution and complete media coverage.</p>
+            <p>Creative planning and full-scale event coverage.</p>
         </div>
 
         <div class="service-item">
             <h2>Post-Production Services</h2>
-            <p>Editing, color grading, sound design and cinematic finishing.</p>
+            <p>Editing, sound, color grading and finishing.</p>
         </div>
 
-        <!-- Invisible card to balance grid -->
-        <div class="service-item empty"></div>
+        <div class="service-item">
+            <h2>Creative Consulting</h2>
+            <p>Creative direction and production strategy.</p>
+        </div>
 
     </div>
+</section>
+
+<section class="process">
+    <h2 class="section-title">Our Creative Process</h2>
+    <div class="process-grid">
+        <div class="process-step">
+            <h3>Discovery</h3>
+            <p>Understanding purpose and audience.</p>
+        </div>
+        <div class="process-step">
+            <h3>Pre-Production</h3>
+            <p>Planning, scripting and logistics.</p>
+        </div>
+        <div class="process-step">
+            <h3>Production</h3>
+            <p>Professional execution on set.</p>
+        </div>
+        <div class="process-step">
+            <h3>Post & Delivery</h3>
+            <p>Polished final output.</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta">
+    <h2 class="section-title">Let’s Build Something Meaningful</h2>
+    <p>Ready to start your next project?</p>
+    <a href="contact.html">Get in Touch</a>
 </section>
 
 <footer>
