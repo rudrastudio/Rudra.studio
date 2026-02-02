@@ -5,7 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Services – Rudrastic Innovations</title>
 
-<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
@@ -23,26 +22,25 @@ body{
 }
 
 /* HEADER */
-header {
-    position: absolute; /* Overlays on top of hero image */
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 60px;
-    background: rgba(0, 0, 0, 0.3); /* semi-transparent */
-    backdrop-filter: blur(8px);
-    transition: top 0.3s ease, background 0.3s ease; /* smooth hide/show */
-    z-index: 1000;
+header{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:rgba(0,0,0,0.3);
+    backdrop-filter:blur(8px);
+    z-index:1000;
 }
 
-.logo{
-    font-weight:700;
-    letter-spacing:2px;
+.logo img{
+    height:40px;
 }
 
+/* NAV */
 nav ul{
     display:flex;
     list-style:none;
@@ -62,15 +60,15 @@ nav a.active{
     opacity:1;
 }
 
-/* PAGE HERO */
+/* HERO */
 .page-hero{
-    height:60vh;
+    height:65vh;
     display:flex;
     align-items:flex-end;
     padding:120px 60px;
     background:
-        linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,.9)),
-        url("https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f") center/cover no-repeat;
+        linear-gradient(to bottom, rgba(0,0,0,.4), rgba(0,0,0,.9)),
+        url("images/5.png") center/cover no-repeat;
 }
 
 .page-hero h1{
@@ -133,6 +131,8 @@ section{
 
 .why-us img{
     width:100%;
+    height:380px;
+    object-fit:cover;
     border-radius:16px;
 }
 
@@ -187,6 +187,9 @@ footer a:hover{
     .why-us{
         grid-template-columns:1fr;
     }
+    .why-us img{
+        height:300px;
+    }
 }
 </style>
 </head>
@@ -195,9 +198,9 @@ footer a:hover{
 
 <!-- HEADER -->
 <header>
-<div class="logo">
-    <img src="images/logo.png" alt="Rudrastic Innovations Logo">
-</div>
+    <div class="logo">
+        <img src="images/logo.png" alt="Rudrastic Innovations Logo">
+    </div>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -214,95 +217,133 @@ footer a:hover{
     <h1>Our Services</h1>
 </section>
 
-<!-- CORE SERVICES (UNCHANGED CONTENT) -->
+<!-- SERVICES -->
 <section>
-    <h2 class="section-title">What We Offer</h2>
+    <h2 class="section-title">What We Do</h2>
     <div class="services-grid">
 
         <div class="service-item">
-            <h2>Film Production</h2>
-            <p>Complete end-to-end film production including scripting, casting, shooting, and post-production.</p>
+            <h2>Film & Media Production</h2>
+            <p>
+                End-to-end production for short films, feature projects,
+                branded films and digital media — from scripting to final delivery.
+            </p>
         </div>
 
         <div class="service-item">
-            <h2>Music Videos</h2>
-            <p>Creative, cinematic and visually engaging music video production tailored to your song’s identity.</p>
+            <h2>Music Production & Videos</h2>
+            <p>
+                Complete music production including composition, recording,
+                mixing, mastering and cinematic music video creation.
+            </p>
         </div>
 
         <div class="service-item">
-            <h2>Commercial Advertisements</h2>
-            <p>High-quality TVCs and digital ads designed to elevate brands and connect with audiences.</p>
+            <h2>Content Writing & Storytelling</h2>
+            <p>
+                Powerful scripts, narratives, lyrics and brand stories crafted
+                to connect emotionally and communicate with clarity.
+            </p>
         </div>
 
         <div class="service-item">
-            <h2>Corporate Films</h2>
-            <p>Professional corporate videos for branding, product launches, company profiles and marketing.</p>
+            <h2>Commercials & Brand Films</h2>
+            <p>
+                Television commercials, digital ads and brand films
+                designed to elevate identity and audience engagement.
+            </p>
         </div>
 
         <div class="service-item">
             <h2>Documentaries</h2>
-            <p>Informative, powerful and emotionally engaging documentary films for storytelling and awareness.</p>
+            <p>
+                Thought-provoking documentaries focused on real stories,
+                social impact, culture, and human experiences.
+            </p>
         </div>
 
         <div class="service-item">
-            <h2>Post-Production</h2>
-            <p>Editing, color grading, sound design, music and complete digital finishing.</p>
+            <h2>Event Management & Coverage</h2>
+            <p>
+                Creative planning, execution and full media coverage for
+                events, launches, concerts and corporate gatherings.
+            </p>
+        </div>
+
+        <div class="service-item">
+            <h2>Post-Production Services</h2>
+            <p>
+                Editing, color grading, sound design, VFX support and
+                final mastering with cinematic finishing.
+            </p>
+        </div>
+
+        <div class="service-item">
+            <h2>Creative Consulting</h2>
+            <p>
+                Concept development, creative direction and production
+                consulting for brands, artists and independent creators.
+            </p>
         </div>
 
     </div>
 </section>
 
-<!-- CREATIVE PROCESS -->
+<!-- PROCESS -->
 <section class="process">
     <h2 class="section-title">Our Creative Process</h2>
     <div class="process-grid">
         <div class="process-step">
-            <h3>Concept & Development</h3>
-            <p>Understanding your vision and crafting strong concepts and scripts.</p>
+            <h3>Discovery & Ideation</h3>
+            <p>Understanding goals, audience and crafting strong creative direction.</p>
         </div>
         <div class="process-step">
             <h3>Pre-Production</h3>
-            <p>Planning, casting, location scouting, scheduling, and design.</p>
+            <p>Planning, scripting, scheduling, casting and logistics.</p>
         </div>
         <div class="process-step">
             <h3>Production</h3>
-            <p>High-quality filming with professional crew and equipment.</p>
+            <p>Professional execution with experienced crew and equipment.</p>
         </div>
         <div class="process-step">
-            <h3>Post-Production</h3>
-            <p>Editing, sound, music, color grading, and final delivery.</p>
+            <h3>Post & Delivery</h3>
+            <p>Editing, sound, music, color grading and final distribution.</p>
         </div>
     </div>
 </section>
 
-<!-- WHY CHOOSE US -->
+<!-- WHY US -->
 <section>
     <div class="why-us">
         <div>
             <h2 class="section-title">Why Choose Rudrastic Innovations</h2>
             <p>
-                We are storytellers first. Every project is approached with
-                cinematic sensibility, creative integrity, and technical excellence.
-                From films and web series to podcasts, music, and events,
-                we deliver media that feels authentic and impactful.
+                We are a creative-driven media studio focused on storytelling,
+                quality and authenticity. Every project is handled with
+                cinematic precision, collaborative spirit and attention to detail.
+            </p>
+            <p style="margin-top:18px;">
+                Whether it’s film, music, content or live events,
+                we create experiences that feel meaningful, engaging
+                and visually powerful.
             </p>
         </div>
-        <img src="https://images.unsplash.com/photo-1510070009289-b5bc34383727" alt="On Set Production">
+        <img src="images/6.png" alt="Production Team at Work">
     </div>
 </section>
 
 <!-- CTA -->
 <section class="cta">
-    <h2 class="section-title">Let’s Create Something Powerful</h2>
-    <p>Have a project in mind? Let’s bring it to life.</p>
-    <a href="contact.html">Contact Us</a>
+    <h2 class="section-title">Let’s Build Something Meaningful</h2>
+    <p>Ready to start your next creative project?</p>
+    <a href="contact.html">Get in Touch</a>
 </section>
 
 <!-- FOOTER -->
 <footer>
     <p>Email: <a href="mailto:info@rudra.studio">info@rudra.studio</a></p>
     <p>Website: <a href="https://rudra.studio">rudra.studio</a></p>
-    <p style="margin-top:15px;">© 2025 Rudrastic Innovations — rudra.studio. All Rights Reserved.</p>
+    <p style="margin-top:15px;">© 2025 Rudrastic Innovations. All Rights Reserved.</p>
 </footer>
 
 </body>
