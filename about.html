@@ -60,7 +60,7 @@ nav a.active{
     opacity:1;
 }
 
-/* HERO IMAGE (FIXED) */
+/* HERO */
 .hero{
     height:100vh;
     position:relative;
@@ -75,19 +75,17 @@ nav a.active{
     object-fit:cover;
 }
 
-/* OVERLAY */
 .hero-overlay{
     position:absolute;
     inset:0;
     background:linear-gradient(to bottom, rgba(0,0,0,.4), rgba(0,0,0,.85));
 }
 
-/* HERO CONTENT */
 .hero-content{
     position:absolute;
     bottom:120px;
     left:60px;
-    max-width:700px;
+    max-width:720px;
 }
 
 .hero-content h1{
@@ -101,7 +99,7 @@ nav a.active{
     opacity:.9;
 }
 
-/* CONTENT SECTIONS */
+/* SECTIONS */
 section{
     padding:100px 60px;
 }
@@ -111,14 +109,18 @@ section{
     margin-bottom:30px;
 }
 
+/* GRID */
 .text-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:60px;
+    align-items:center;
 }
 
 .text-grid img{
     width:100%;
+    height:380px;
+    object-fit:cover;
     border-radius:12px;
 }
 
@@ -149,6 +151,12 @@ footer{
     font-size:14px;
 }
 
+footer a{
+    color:#fff;
+    text-decoration:none;
+    opacity:.85;
+}
+
 /* RESPONSIVE */
 @media(max-width:900px){
     .text-grid{
@@ -162,6 +170,9 @@ footer{
     }
     section{
         padding:80px 30px;
+    }
+    .text-grid img{
+        height:300px;
     }
 }
 </style>
@@ -184,11 +195,10 @@ footer{
     </nav>
 </header>
 
-<!-- HERO IMAGE (NO GIF, NO VIDEO) -->
+<!-- HERO -->
 <section class="hero">
     <img src="images/3.png" alt="About Hero Image">
     <div class="hero-overlay"></div>
-
     <div class="hero-content">
         <h1>Driven by Story. Built on Craft.</h1>
         <p>
@@ -198,40 +208,56 @@ footer{
     </div>
 </section>
 
-<!-- STORY -->
+<!-- OUR STORY -->
 <section>
     <h2 class="section-title">Our Story</h2>
     <div class="text-grid">
         <div>
             <p>
-                Rudrastic Innovations is a film and visual production studio dedicated
-                to meaningful storytelling and high-impact visuals.
-                With international recognition and a hands-on creative approach,
-                we develop original films, branded content, and cinematic narratives
-                that resonate across audiences.
+                Rudrastic Innovations is a film and visual production studio built
+                on the belief that stories shape perception. What began as a passion
+                for cinema has evolved into a creative studio delivering powerful
+                visual narratives across films, music, and branded storytelling.
             </p>
-            <p style="margin-top:20px;">
-                From concept to final cut, we blend artistic vision with technical
-                precision to craft stories that feel authentic, bold, and timeless.
+
+            <p style="margin-top:18px;">
+                With international recognition and hands-on creative leadership,
+                we develop original concepts that blend emotion, aesthetics, and
+                purpose. Our work is rooted in authenticity — stories that feel
+                immersive, bold, and deeply human.
+            </p>
+
+            <p style="margin-top:18px;">
+                From ideation to post-production, we collaborate closely with
+                artists, brands, and organizations to craft cinematic experiences
+                that resonate long after the screen fades to black.
             </p>
         </div>
-        <img src="images/aboutus.png" alt="Film Production">
+
+        <img src="images/aboutus.png" alt="Film Production Story">
     </div>
 </section>
 
-<!-- VISION -->
+<!-- OUR VISION -->
 <section>
     <h2 class="section-title">Our Vision</h2>
     <div class="text-grid">
         <img src="images/about.png" alt="Cinematic Vision">
         <div>
             <p>
-                We believe in the power of cinema to move people emotionally.
-                Our vision is to create stories that transcend borders and connect
-                cultures through powerful visuals and sound.
+                Our vision is to push creative boundaries through cinema.
+                We aim to tell stories that resonate emotionally while maintaining
+                artistic integrity and technical excellence.
             </p>
-            <p style="margin-top:20px;">
-                Every frame is intentional. Every story matters.
+
+            <p style="margin-top:18px;">
+                We focus on visual storytelling that transcends language, culture,
+                and geography — connecting people through shared human experiences.
+            </p>
+
+            <p style="margin-top:18px;">
+                Every frame is intentional.
+                Every project is approached as a cinematic journey.
             </p>
         </div>
     </div>
